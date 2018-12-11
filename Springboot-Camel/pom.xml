@@ -1,0 +1,108 @@
+	<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <repositories>
+    <repository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <layout>default</layout>
+      <url>http://repo1.maven.org/maven2</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+<build>
+<sourceDirectory>${project.basedir}/src/</sourceDirectory>
+<resources>
+      <resource>
+        <directory>${project.basedir}/src/resources</directory>
+      </resource>
+    </resources>
+</build>
+ 
+ 
+ <modelVersion>4.0.0</modelVersion>
+  <groupId>com.siva.camelspring</groupId>
+  <artifactId>camelspring-siva</artifactId>
+  <version>0.0.1</version>
+  
+  
+<dependencies>
+ 
+ <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>    
+    <version>2.0.1.RELEASE</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-core</artifactId>    
+    <version>2.18.1</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-servlet</artifactId>    
+    <version>2.18.1</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-swagger-java-starter</artifactId>    
+    <version>2.18.1</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-jackson</artifactId>    
+    <version>2.18.1</version>
+</dependency>
+
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-tomcat</artifactId>
+        <version>2.1.1.RELEASE</version>
+     <scope>provided</scope>
+</dependency> 
+
+<dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-scala_2.11</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+
+        <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.9.4</version>
+        <exclusions>
+            <exclusion>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>2.9.4</version>
+    </dependency>
+
+        <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>2.9.4</version>
+
+        </dependency>
+</dependencies>
+
+
+
+
+ 
+</project>
